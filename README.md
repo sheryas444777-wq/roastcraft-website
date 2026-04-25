@@ -4,6 +4,8 @@ Coffee e-commerce website
 
 ## 📌 Project Overview
 Roastcraft is a multi-page coffee e-commerce website designed to simulate a real-world online coffee store. The project focuses on user experience, product browsing, cart functionality, authentication, and a complete frontend flow of an e-commerce system.
+## 🌐 Live Demo
+https://sheryas444777-wq.github.io/roastcraft-website/
 
 ---
 
