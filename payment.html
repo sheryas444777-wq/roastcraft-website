@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment - Roastcraft</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+<h2 class="logo">Roastcraft</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="coffee.html">Coffee</a>
+<a href="equipment.html">Equipment</a>
+<a href="events.html">Events</a>
+<a href="cart.html">Cart</a>
+<a href="offers.html">Offers</a>
+<a class="order-btn" href="signin.html">Sign In</a>
+</nav>
+</header>
+
+<div class="page-header">
+  <h1>Secure Payment</h1>
+  <p class="page-desc">Choose your payment method and complete your order.</p>
+</div>
+
+<section class="coffee-section">
+  <div class="cart-layout">
+    <div class="cart-left">
+      <p class="section-label">Billing Details</p>
+      <h2>Payment Method</h2>
+
+      <div style="margin-bottom:22px; border-radius:18px; overflow:hidden; box-shadow:0 16px 40px rgba(0,0,0,0.12);">
+        <img src="images/pexels-chudesabyvaut-1351350-2612334.jpg" alt="Coffee payment experience" style="width:100%; height:260px; object-fit:cover; display:block;">
+      </div>
+
+      <div class="auth-box" style="max-width:none; padding:28px;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="customer-name" placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="customer-email" placeholder="you@example.com">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="customer-phone" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label>City</label>
+            <input type="text" id="customer-city" placeholder="Your city">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Delivery Address</label>
+          <input type="text" id="customer-address" >
+        </div>
+
+        <div class="form-group" style="margin-top:26px;">
+          <label style="margin-bottom:12px; display:block;">Select Payment Method</label>
+
+          <label style="display:flex; gap:10px; align-items:flex-start; padding:14px; border:1px solid #e5ddd4; margin-bottom:10px; cursor:pointer;">
+            <input type="radio" name="payment-method" value="card" checked>
+            <span>
+              <strong>Credit / Debit Card</strong><br>
+              <span style="color:gray; font-size:13px;"></span>
+            </span>
+          </label>
+
+          <label style="display:flex; gap:10px; align-items:flex-start; padding:14px; border:1px solid #e5ddd4; margin-bottom:10px; cursor:pointer;">
+            <input type="radio" name="payment-method" value="netbanking">
+            <span>
+              <strong>Net Banking</strong><br>
+              <span style="color:gray; font-size:13px;"></span>
+            </span>
+          </label>
+
+          <label style="display:flex; gap:10px; align-items:flex-start; padding:14px; border:1px solid #e5ddd4; cursor:pointer;">
+            <input type="radio" name="payment-method" value="cod">
+            <span>
+              <strong>Cash on Delivery</strong><br>
+              <span style="color:gray; font-size:13px;"></span>
+            </span>
+          </label>
+        </div>
+
+        <div id="card-fields" style="display:none; margin-top:18px;">
+          <div class="form-group">
+            <label>Card Number</label>
+            <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Expiry</label>
+              <input type="text" id="card-expiry" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+              <label>CVV</label>
+              <input type="password" id="card-cvv" placeholder="123">
+            </div>
+          </div>
+        </div>
+
+        <div id="netbanking-fields" style="display:none; margin-top:18px;">
+          <div class="form-group">
+            <label>Bank Name</label>
+            <input type="text" id="bank-name" placeholder="Example Bank">
+          </div>
+        </div>
+
+        <button class="auth-submit" style="margin-top:22px;" onclick="completePayment()">Pay Now</button>
+      </div>
+    </div>
+
+    <div class="cart-right">
+      <div class="cart-summary">
+        <p class="section-label">Summary</p>
+        <h2 id="summary-title">Payment Summary</h2>
+
+        <div class="summary-row">
+          <span>Order Type</span>
+          <span id="summary-type">Order</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Item / Plan</span>
+          <span id="summary-item">Roastcraft Order</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Items</span>
+          <span id="summary-count">0</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">&pound;0.00</span>
+        </div>
+
+        <div class="summary-row">
+          <span>Delivery</span>
+          <span id="summary-delivery">Free</span>
+        </div>
+
+        <div class="summary-total">
+          <span>Total</span>
+          <span id="summary-total">&pound;0.00</span>
+        </div>
+
+        <p style="color:gray; font-size:13px; margin-top:18px;">
+          This is a demo payment page designed to feel like a real storefront checkout.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="payment-popup" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:9999; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:#fffaf4; width:min(460px, 100%); padding:34px 30px; text-align:center; border-radius:18px; box-shadow:0 20px 60px rgba(0,0,0,0.22);">
+    <p class="section-label" style="margin-bottom:10px;">Order Confirmed</p>
+    <h2 style="margin-bottom:12px;">Thank You!</h2>
+    <p id="popup-message" style="color:#5b5148; line-height:1.6; margin-bottom:22px;">Your order has been placed successfully.</p>
+    <button class="auth-submit" onclick="finishOrder()">Continue Shopping</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <h3>Roastcraft</h3>
+      <p>Premium single origin coffee, roasted fresh and delivered to your door.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.2 0-1-.1-2-.1-2.4 0-4 1.5-4 4.2V11H7.5v3H10v7h3.5z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 6.5c-.6.3-1.3.5-2 .6.7-.4 1.3-1.1 1.6-1.9-.7.4-1.5.7-2.3.9A3.5 3.5 0 0 0 12.3 9c0 .3 0 .6.1.8-2.9-.1-5.6-1.6-7.3-3.8-.3.5-.5 1.1-.5 1.8 0 1.2.6 2.3 1.6 2.9-.6 0-1.1-.2-1.6-.4 0 0 0 .1 0 .1 0 1.7 1.2 3.1 2.8 3.4-.3.1-.6.1-.9.1-.2 0-.4 0-.7-.1.4 1.4 1.8 2.4 3.3 2.4A7 7 0 0 1 4 18.3 9.9 9.9 0 0 0 9.4 20c6.5 0 10.1-5.5 10.1-10.2v-.5c.7-.5 1.2-1 1.5-1.8z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="coffee.html">Coffee</a>
+      <a href="equipment.html">Equipment</a>
+      <a href="events.html">Events</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>42 Roast Lane, Shoreditch</p>
+      <p>London, E1 6RF</p>
+      <p>hello@roastcraft.co.uk</p>
+      <p>+44 20 7946 0958</p>
+    </div>
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Mon-Fri: 7am - 7pm</p>
+      <p>Sat-Sun: 8am - 6pm</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Roastcraft Coffee. All rights reserved.</p>
+  </div>
+</footer>
+
+<script type="module">
+  import { clearCart, getCartItems } from "./store.js";
+
+  const params = new URLSearchParams(window.location.search);
+  const paymentMode = params.get("mode") || "cart";
+  const paymentPlan = params.get("plan") || "Roastcraft Order";
+  const paymentPrice = Number(params.get("price") || "0");
+  const paymentItems = Number(params.get("items") || "0");
+  const delivery = params.get("delivery") || "Free";
+  let redirectTarget = paymentMode === "offer" ? "offers.html" : "index.html";
+
+  function formatMoney(amount) {
+    return `&pound;${amount.toFixed(2)}`;
+  }
+
+  async function loadSummary() {
+    if (paymentMode === "offer") {
+      document.getElementById("summary-title").textContent = "Subscription Summary";
+      document.getElementById("summary-type").textContent = "Subscription";
+      document.getElementById("summary-item").textContent = paymentPlan;
+      document.getElementById("summary-count").textContent = "1";
+      document.getElementById("summary-subtotal").innerHTML = formatMoney(paymentPrice);
+      document.getElementById("summary-total").innerHTML = formatMoney(paymentPrice);
+      document.getElementById("summary-delivery").textContent = "Free";
+      return;
+    }
+
+    const cartItems = await getCartItems();
+    const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const count = cartItems.reduce((sum, item) => sum + item.qty, 0);
+    const total = paymentPrice || subtotal;
+
+    document.getElementById("summary-type").textContent = "Cart Order";
+    document.getElementById("summary-item").textContent = count ? "Roastcraft Cart" : "Roastcraft Order";
+    document.getElementById("summary-count").textContent = String(paymentItems || count);
+    document.getElementById("summary-subtotal").innerHTML = formatMoney(subtotal || total);
+    document.getElementById("summary-total").innerHTML = formatMoney(total);
+    document.getElementById("summary-delivery").innerHTML = delivery;
+  }
+
+  function updatePaymentFields() {
+    const method = document.querySelector('input[name="payment-method"]:checked')?.value || "card";
+    document.getElementById("card-fields").style.display = method === "card" ? "block" : "none";
+    document.getElementById("netbanking-fields").style.display = method === "netbanking" ? "block" : "none";
+  }
+
+  function validatePaymentForm() {
+    const name = document.getElementById("customer-name").value.trim();
+    const email = document.getElementById("customer-email").value.trim();
+    const phone = document.getElementById("customer-phone").value.trim();
+    const address = document.getElementById("customer-address").value.trim();
+    const method = document.querySelector('input[name="payment-method"]:checked')?.value;
+
+    if (!name || !email || !phone || !address) {
+      alert("Please complete your billing details.");
+      return false;
+    }
+
+    if (method === "card") {
+      if (!document.getElementById("card-number").value.trim() || !document.getElementById("card-expiry").value.trim() || !document.getElementById("card-cvv").value.trim()) {
+        alert("Please complete your card details.");
+        return false;
+      }
+    }
+
+    if (method === "netbanking" && !document.getElementById("bank-name").value.trim()) {
+      alert("Please enter your bank name.");
+      return false;
+    }
+
+    return true;
+  }
+
+  window.completePayment = async function () {
+    if (!validatePaymentForm()) {
+      return;
+    }
+
+    if (paymentMode === "cart") {
+      await clearCart();
+    }
+
+    const method = document.querySelector('input[name="payment-method"]:checked')?.value || "card";
+    const message = paymentMode === "offer"
+      ? `Thank you for subscribing to the ${paymentPlan} plan. Your payment via ${method.toUpperCase()} was successful.`
+      : `Thank you for your order. Your payment via ${method.toUpperCase()} was successful and your coffee is being prepared.`;
+
+    document.getElementById("popup-message").textContent = message;
+    document.getElementById("payment-popup").style.display = "flex";
+  };
+
+  window.finishOrder = function () {
+    document.getElementById("payment-popup").style.display = "none";
+    window.location.href = redirectTarget;
+  };
+
+  document.querySelectorAll('input[name="payment-method"]').forEach((input) => {
+    input.addEventListener("change", updatePaymentFields);
+  });
+
+  updatePaymentFields();
+  loadSummary();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

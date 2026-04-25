@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coffee Selection – Roastcraft</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="product-page">
+
+<header class="navbar">
+<h2 class="logo">Roastcraft</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="coffee.html" class="active-link">Coffee</a>
+<a href="equipment.html">Equipment</a>
+<a href="events.html">Events</a>
+<a href="cart.html">Cart</a>
+<a href="offers.html">Offers</a>
+<a class="order-btn" href="signin.html">Sign In</a>
+</nav>
+</header>
+
+<div class="page-header">
+  <h1>Coffee Selection</h1>
+  <p class="page-desc">Every bean traceable. Every roast intentional.</p>
+</div>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search coffees..." onkeyup="searchCoffee()">
+</div>
+
+<section class="coffee-section">
+
+  <p class="section-label">Single Origins</p>
+  <h2>Origin Blends</h2>
+
+  <div class="coffee-grid" id="coffeeGrid">
+
+    <div class="coffee-card" data-name="ethiopian yirgacheffe">
+      <div class="coffee-card-img">
+        <img src="images/c1.png" alt="Ethiopian Yirgacheffe">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Ethiopian Yirgacheffe</h3>
+        <p class="coffee-origin"> Ethiopia · Light Roast</p>
+        <p>
+          <span class="short-desc">Bright floral notes with hints of jasmine and citrus.</span>
+          <span class="full-desc" style="display:none;"> Best brewed as pour-over or Chemex. Sourced from the Yirgacheffe region in southern Ethiopia, known for producing some of the world's most distinctive and aromatic coffees. Harvested at high altitude for maximum flavour complexity.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£14.99 / 340g</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="colombian supremo">
+      <div class="coffee-card-img">
+        <img src="images/c2.png" alt="Colombian Supremo">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Colombian Supremo</h3>
+        <p class="coffee-origin"> Colombia · Medium Roast</p>
+        <p>
+          <span class="short-desc">Smooth and balanced with chocolate and caramel finish.</span>
+          <span class="full-desc" style="display:none;"> Versatile for all brew methods from espresso to filter. Grown in the Huila region of Colombia at elevations between 1,500 and 2,000 metres. The Supremo grade refers to the largest and highest quality beans, carefully hand-picked and washed processed.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£12.99 / 340g</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="guatemalan antigua">
+      <div class="coffee-card-img">
+        <img src="images/c3.png" alt="Guatemalan Antigua">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Guatemalan Antigua</h3>
+        <p class="coffee-origin"> Guatemala · Medium Dark Roast</p>
+        <p>
+          <span class="short-desc">Rich smoky depth with notes of dark chocolate and toasted almond.</span>
+          <span class="full-desc" style="display:none;"> Grown in the volcanic soils surrounding the historic city of Antigua, Guatemala. The combination of rich volcanic soil, high altitude and a cool microclimate creates a uniquely complex cup with a smooth, full body and a long lingering finish.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£13.49 / 340g</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="coffee-section coffee-section-alt">
+
+  <p class="section-label">House Blends</p>
+  <h2>Signature Blends</h2>
+
+  <div class="coffee-grid">
+
+    <div class="coffee-card" data-name="espresso roast blend">
+      <div class="coffee-card-img">
+        <img src="images/b1.png" alt="Espresso Roast Blend">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Espresso Roast Blend</h3>
+        <p class="coffee-origin"> House Blend · Dark Roast</p>
+        <p>
+          <span class="short-desc">Rich and bold blend of Brazilian and Colombian beans.</span>
+          <span class="full-desc" style="display:none;"> Designed specifically for espresso machines and moka pots. A carefully crafted dark roast that produces a thick, rich crema with notes of dark chocolate, caramel and a hint of smokiness. Perfect for making lattes, cappuccinos and flat whites at home.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£11.99 / 340g</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="morning ritual">
+      <div class="coffee-card-img">
+        <img src="images/b2.png" alt="Morning Ritual">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Morning Ritual</h3>
+        <p class="coffee-origin"> House Blend · Medium Roast</p>
+        <p>
+          <span class="short-desc">Smooth and approachable. Perfect for everyday drinking.</span>
+          <span class="full-desc" style="display:none;"> Works with any brew method from cafetiere to filter machine. A blend of three carefully selected origins, roasted to a medium level to bring out natural sweetness and balance. Notes of milk chocolate, brown sugar and a gentle nuttiness make this the perfect everyday coffee.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£10.99 / 340g</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="weekend blend">
+      <div class="coffee-card-img">
+        <img src="images/b3.png" alt="Weekend Blend">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Weekend Blend</h3>
+        <p class="coffee-origin"> House Blend · Light Roast</p>
+        <p>
+          <span class="short-desc">Lighter and brighter for leisurely weekends.</span>
+          <span class="full-desc" style="display:none;"> A blend of Ethiopian and Kenyan beans, roasted light to preserve delicate floral and fruity characteristics. Pour-over perfection — this blend shines when brewed slowly with a V60 or Chemex. Expect notes of red berries, citrus zest and a clean, tea-like finish.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£13.49 / 340g</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="coffee-section">
+
+  <p class="section-label">Coffee Drinks</p>
+  <h2>Classic Drinks</h2>
+
+  <div class="coffee-grid">
+
+    <div class="coffee-card" data-name="espresso">
+      <div class="coffee-card-img">
+        <img src="images/d1.png" alt="Espresso">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Espresso</h3>
+        <p class="coffee-origin"> Strong · 30ml</p>
+        <p>
+          <span class="short-desc">A concentrated shot of coffee, bold and intense.</span>
+          <span class="full-desc" style="display:none;"> Brewed by forcing hot water at high pressure through finely ground beans. The result is a small but intensely flavoured drink with a rich golden crema on top. The foundation of most coffee drinks. Best enjoyed fresh and immediately after brewing for maximum flavour and aroma.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£2.50</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="latte">
+      <div class="coffee-card-img">
+        <img src="images/d2.png" alt="Latte">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Latte</h3>
+        <p class="coffee-origin"> Smooth · 300ml</p>
+        <p>
+          <span class="short-desc">Espresso with steamed milk — smooth and creamy.</span>
+          <span class="full-desc" style="display:none;"> A shot of espresso topped with steamed milk and a thin layer of velvety milk foam. Smooth, creamy and approachable. Our baristas steam milk to exactly 65°C for the perfect texture. Available with oat, almond or soy milk alternatives on request.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£3.50</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="cappuccino">
+      <div class="coffee-card-img">
+        <img src="images/d3.png" alt="Cappuccino">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Cappuccino</h3>
+        <p class="coffee-origin"> Frothy · 180ml</p>
+        <p>
+          <span class="short-desc">Equal parts espresso, milk and thick foam.</span>
+          <span class="full-desc" style="display:none;"> A classic Italian favourite that dates back to early 20th century Vienna. The cappuccino is defined by its thick, dry foam which sits proudly on top of the drink. Our version uses a double shot of espresso for a bold, balanced flavour that cuts through the creamy milk perfectly.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£3.50</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-col">
+      <h3>Roastcraft</h3>
+      <p>Premium single origin coffee, roasted fresh and delivered to your door.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.2 0-1-.1-2-.1-2.4 0-4 1.5-4 4.2V11H7.5v3H10v7h3.5z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 6.5c-.6.3-1.3.5-2 .6.7-.4 1.3-1.1 1.6-1.9-.7.4-1.5.7-2.3.9A3.5 3.5 0 0 0 12.3 9c0 .3 0 .6.1.8-2.9-.1-5.6-1.6-7.3-3.8-.3.5-.5 1.1-.5 1.8 0 1.2.6 2.3 1.6 2.9-.6 0-1.1-.2-1.6-.4 0 0 0 .1 0 .1 0 1.7 1.2 3.1 2.8 3.4-.3.1-.6.1-.9.1-.2 0-.4 0-.7-.1.4 1.4 1.8 2.4 3.3 2.4A7 7 0 0 1 4 18.3 9.9 9.9 0 0 0 9.4 20c6.5 0 10.1-5.5 10.1-10.2v-.5c.7-.5 1.2-1 1.5-1.8z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="coffee.html">Coffee</a>
+      <a href="equipment.html">Equipment</a>
+      <a href="events.html">Events</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>42 Roast Lane, Shoreditch</p>
+      <p>London, E1 6RF</p>
+      <p>hello@roastcraft.co.uk</p>
+      <p>+44 20 7946 0958</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Mon–Fri: 7am – 7pm</p>
+      <p>Sat–Sun: 8am – 6pm</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Roastcraft Coffee. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<script>
+function searchCoffee(){
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('.coffee-card');
+  cards.forEach(card => {
+    const name = card.getAttribute('data-name');
+    if(name){
+      card.style.display = name.includes(input) ? 'block' : 'none';
+    }
+  });
+}
+
+function toggleDesc(btn){
+  const p = btn.parentElement;
+  const shortDesc = p.querySelector('.short-desc');
+  const fullDesc = p.querySelector('.full-desc');
+  if(fullDesc.style.display === 'none'){
+    fullDesc.style.display = 'inline';
+    shortDesc.style.display = 'none';
+    btn.textContent = 'read less';
+  } else {
+    fullDesc.style.display = 'none';
+    shortDesc.style.display = 'inline';
+    btn.textContent = 'read more';
+  }
+}
+</script>
+<script src="script.js"></script>
+<script type="module">
+  import { addItemToCart } from "./store.js";
+
+  function parsePrice(card) {
+    const priceText = card.querySelector(".coffee-price")?.textContent || "";
+    const match = priceText.match(/(\d+(?:\.\d+)?)/);
+    return match ? Number(match[1]) : 0;
+  }
+
+  function showToast(message) {
+    const msg = document.createElement("div");
+    msg.style.cssText = "position:fixed; bottom:24px; right:24px; background:#1a1410; color:white; padding:14px 24px; font-size:14px; z-index:9999; border-left:4px solid #c48b4f;";
+    msg.textContent = message;
+    document.body.appendChild(msg);
+    setTimeout(() => msg.remove(), 2500);
+  }
+
+  document.querySelectorAll(".coffee-card .coffee-btn").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      const card = button.closest(".coffee-card");
+      const name = card.querySelector("h3")?.textContent?.trim();
+      const price = parsePrice(card);
+      const qty = Math.max(1, Number(card.querySelector(".qty-input")?.value) || 1);
+
+      if (!name || !price) {
+        return;
+      }
+
+      await addItemToCart(name, price, qty);
+      showToast(name + " added to cart x" + qty + ".");
+    });
+  });
+</script>
+
+</body>
+</html>
+

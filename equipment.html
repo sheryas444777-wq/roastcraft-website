@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brewing Equipment – Roastcraft</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="product-page">
+
+<header class="navbar">
+
+<h2 class="logo">Roastcraft</h2>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="coffee.html">Coffee</a>
+<a href="equipment.html" class="active-link">Equipment</a>
+<a href="events.html">Events</a>
+<a href="cart.html">Cart</a>
+<a href="offers.html">Offers</a>
+
+<a class="order-btn" href="signin.html">Sign In</a>
+
+</nav>
+
+</header>
+
+<div class="page-header">
+  <h1>Brewing Equipment</h1>
+  <p class="page-desc">Everything you need to brew the perfect cup at home.</p>
+</div>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search equipment..." onkeyup="searchEquipment()">
+</div>
+
+<section class="coffee-section">
+
+  <p class="section-label">Espresso</p>
+  <h2>Espresso Machines</h2>
+
+  <div class="coffee-grid" id="equipmentGrid">
+
+    <div class="coffee-card" data-name="breville barista express">
+      <div class="coffee-card-img">
+        <img src="images/e1.png" alt="Breville Barista Express">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Breville Barista Express</h3>
+        <p class="coffee-origin"> Best Seller</p>
+        <p>
+          <span class="short-desc">Built-in grinder, steam wand and 15-bar pressure.</span>
+          <span class="full-desc" style="display:none;"> The all-in-one home espresso solution. Features a integrated conical burr grinder with dose control, a powerful steam wand for microfoam milk texturing, and a precise pressure gauge. Ideal for home baristas who want café quality espresso without buying separate equipment.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£649.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="delonghi dedica">
+      <div class="coffee-card-img">
+        <img src="images/e2.png" alt="De'Longhi Dedica">
+      </div>
+      <div class="coffee-card-body">
+        <h3>De'Longhi Dedica</h3>
+        <p class="coffee-origin"> Great for Beginners</p>
+        <p>
+          <span class="short-desc">Slim design perfect for small kitchens.</span>
+          <span class="full-desc" style="display:none;"> Manual milk frothing and fast 40 second heat-up time. At only 15cm wide it fits easily on any counter. Features a 15-bar pump for authentic espresso pressure, a removable water tank and a professional style steam wand. Perfect first espresso machine for beginners.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£179.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="rancilio silvia">
+      <div class="coffee-card-img">
+        <img src="images/e3.png" alt="Rancilio Silvia">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Rancilio Silvia</h3>
+        <p class="coffee-origin"> Professional Grade</p>
+        <p>
+          <span class="short-desc">Professional single boiler, loved by home baristas.</span>
+          <span class="full-desc" style="display:none;"> A favourite among serious home baristas for its precision and durability. Built with commercial grade components including a brass boiler, stainless steel body and a professional portafilter. With the right technique this machine produces espresso that rivals top café standards.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£549.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="coffee-section coffee-section-alt">
+
+  <p class="section-label">Manual Brewing</p>
+  <h2>Pour Over & Filter</h2>
+
+  <div class="coffee-grid" id="equipmentGrid2">
+
+    <div class="coffee-card" data-name="hario v60">
+      <div class="coffee-card-img">
+        <img src="images/e4.png" alt="Hario V60">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Hario V60</h3>
+        <p class="coffee-origin"> Most Popular</p>
+        <p>
+          <span class="short-desc">The iconic Japanese dripper for a clean bright cup.</span>
+          <span class="full-desc" style="display:none;"> Available in ceramic, glass and plastic. The V60's spiral ribs and large single hole allow for maximum control over brew time and flavour extraction. Beloved by specialty coffee professionals worldwide. Best paired with light to medium roast single origin coffees and a gooseneck kettle.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£24.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="chemex">
+      <div class="coffee-card-img">
+        <img src="images/e5.png" alt="Chemex 6-Cup">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Chemex 6-Cup</h3>
+        <p class="coffee-origin"> Editor's Pick</p>
+        <p>
+          <span class="short-desc">Beautiful hourglass design with exceptionally clean results.</span>
+          <span class="full-desc" style="display:none;"> Thick paper filters produce an exceptionally clean, sweet cup by removing oils and fine particles. The Chemex has been displayed in the Museum of Modern Art in New York for its elegant design. Makes 3 to 6 cups at a time — perfect for brewing for guests or meal prepping coffee for the week.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£44.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="aeropress">
+      <div class="coffee-card-img">
+        <img src="images/e6.png" alt="AeroPress">
+      </div>
+      <div class="coffee-card-body">
+        <h3>AeroPress</h3>
+        <p class="coffee-origin"> Best for Travel</p>
+        <p>
+          <span class="short-desc">Versatile, portable and forgiving — perfect for travellers.</span>
+          <span class="full-desc" style="display:none;"> Brew espresso-style concentrate or a full long black depending on your recipe. The AeroPress is incredibly forgiving and produces a smooth, low-acid cup in under 2 minutes. Lightweight, durable and easy to clean — the ideal companion for camping, hotels and office brewing.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£35.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="coffee-section">
+
+  <p class="section-label">Immersion</p>
+  <h2>French Press & Moka</h2>
+
+  <div class="coffee-grid" id="equipmentGrid3">
+
+    <div class="coffee-card" data-name="bodum chambord french press">
+      <div class="coffee-card-img">
+        <img src="images/e7.png" alt="Bodum Chambord">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Bodum Chambord</h3>
+        <p class="coffee-origin"> French Press</p>
+        <p>
+          <span class="short-desc">Classic stainless steel and glass, full immersion brewing.</span>
+          <span class="full-desc" style="display:none;"> Full immersion brewing produces a rich, full-bodied cup with natural oils intact. The Chambord is one of the most iconic coffee brewers in the world, combining elegant design with simple functionality. Best used with a coarse grind and a 4 minute steep time for maximum flavour.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£29.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="bialetti moka express">
+      <div class="coffee-card-img">
+        <img src="images/e8.png" alt="Bialetti Moka Express">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Bialetti Moka Express</h3>
+        <p class="coffee-origin"> Stovetop Espresso</p>
+        <p>
+          <span class="short-desc">The iconic Italian stovetop espresso maker.</span>
+          <span class="full-desc" style="display:none;"> Rich concentrated coffee in under 5 minutes. The Moka Express has been a staple of Italian households since 1933. Steam pressure forces hot water through coffee grounds to produce a bold, strong brew similar to espresso. Available in 2, 4, 6 and 9 cup sizes to suit any household.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£32.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coffee-card" data-name="fellow stagg kettle">
+      <div class="coffee-card-img">
+        <img src="images/e9.png" alt="Fellow Stagg Kettle">
+      </div>
+      <div class="coffee-card-body">
+        <h3>Fellow Stagg EKG Kettle</h3>
+        <p class="coffee-origin"> Essential Accessory</p>
+        <p>
+          <span class="short-desc">Variable temperature gooseneck kettle for precise brewing.</span>
+          <span class="full-desc" style="display:none;"> Essential for precise pour-over brewing at home. The EKG features variable temperature control from 60°C to 100°C, a built-in stopwatch, a hold mode to maintain temperature, and a beautiful matte finish. The precision gooseneck spout gives you complete control over water flow rate and pour direction.</span>
+          <button class="read-more-btn" onclick="toggleDesc(this)">read more</button>
+        </p>
+        <p class="coffee-price">£145.00</p>
+        <div class="product-actions">
+          <label class="qty-picker">
+            <span>Qty</span>
+            <input type="number" class="qty-input" min="1" value="1">
+          </label>
+          <a href="cart.html" class="coffee-btn">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-col">
+      <h3>Roastcraft</h3>
+      <p>Premium single origin coffee, roasted fresh and delivered to your door.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.2 0-1-.1-2-.1-2.4 0-4 1.5-4 4.2V11H7.5v3H10v7h3.5z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 6.5c-.6.3-1.3.5-2 .6.7-.4 1.3-1.1 1.6-1.9-.7.4-1.5.7-2.3.9A3.5 3.5 0 0 0 12.3 9c0 .3 0 .6.1.8-2.9-.1-5.6-1.6-7.3-3.8-.3.5-.5 1.1-.5 1.8 0 1.2.6 2.3 1.6 2.9-.6 0-1.1-.2-1.6-.4 0 0 0 .1 0 .1 0 1.7 1.2 3.1 2.8 3.4-.3.1-.6.1-.9.1-.2 0-.4 0-.7-.1.4 1.4 1.8 2.4 3.3 2.4A7 7 0 0 1 4 18.3 9.9 9.9 0 0 0 9.4 20c6.5 0 10.1-5.5 10.1-10.2v-.5c.7-.5 1.2-1 1.5-1.8z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="coffee.html">Coffee</a>
+      <a href="equipment.html">Equipment</a>
+      <a href="events.html">Events</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>42 Roast Lane, Shoreditch</p>
+      <p>London, E1 6RF</p>
+      <p>hello@roastcraft.co.uk</p>
+      <p>+44 20 7946 0958</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Mon–Fri: 7am – 7pm</p>
+      <p>Sat–Sun: 8am – 6pm</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Roastcraft Coffee. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<script>
+function searchEquipment(){
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const cards = document.querySelectorAll('.coffee-card');
+  cards.forEach(card => {
+    const name = card.getAttribute('data-name');
+    if(name){
+      card.style.display = name.includes(input) ? 'block' : 'none';
+    }
+  });
+}
+
+function toggleDesc(btn){
+  const p = btn.parentElement;
+  const shortDesc = p.querySelector('.short-desc');
+  const fullDesc = p.querySelector('.full-desc');
+  if(fullDesc.style.display === 'none'){
+    fullDesc.style.display = 'inline';
+    shortDesc.style.display = 'none';
+    btn.textContent = 'read less';
+  } else {
+    fullDesc.style.display = 'none';
+    shortDesc.style.display = 'inline';
+    btn.textContent = 'read more';
+  }
+}
+</script>
+
+<script src="script.js"></script>
+<script type="module">
+  import { addItemToCart } from "./store.js";
+
+  function parsePrice(card) {
+    const priceText = card.querySelector(".coffee-price")?.textContent || "";
+    const match = priceText.match(/(\d+(?:\.\d+)?)/);
+    return match ? Number(match[1]) : 0;
+  }
+
+  function showToast(message) {
+    const msg = document.createElement("div");
+    msg.style.cssText = "position:fixed; bottom:24px; right:24px; background:#1a1410; color:white; padding:14px 24px; font-size:14px; z-index:9999; border-left:4px solid #c48b4f;";
+    msg.textContent = message;
+    document.body.appendChild(msg);
+    setTimeout(() => msg.remove(), 2500);
+  }
+
+  document.querySelectorAll(".coffee-card .coffee-btn").forEach((button) => {
+    button.addEventListener("click", async (event) => {
+      event.preventDefault();
+      const card = button.closest(".coffee-card");
+      const name = card.querySelector("h3")?.textContent?.trim();
+      const price = parsePrice(card);
+      const qty = Math.max(1, Number(card.querySelector(".qty-input")?.value) || 1);
+
+      if (!name || !price) {
+        return;
+      }
+
+      await addItemToCart(name, price, qty);
+      showToast(name + " added to cart x" + qty + ".");
+    });
+  });
+</script>
+
+</body>
+</html>
+

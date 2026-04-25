@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register for Event – Roastcraft</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<h1 class="logo">Roastcraft</h1>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="coffee.html">Coffee</a>
+<a href="equipment.html">Equipment</a>
+<a href="events.html" class="active-link">Events</a>
+<a href="cart.html">Cart</a>
+<a href="offers.html">Offers</a>
+
+<a class="order-btn" href="signin.html">Sign In</a>
+
+</nav>
+
+</header>
+
+<div class="page-header">
+  <h2>Event Registration</h2>
+  <p class="page-desc">Fill in your details below to register for one of our events.</p>
+</div>
+
+<section class="coffee-section">
+  <h2>Register for Event</h2>
+
+  <div style="max-width:700px;">
+
+    <div id="form-success" style="display:none; background:#e8f5e9; border-left:4px solid #4caf50; padding:16px 20px; margin-bottom:24px;">
+      <strong>Registration received!</strong> We'll be in touch with confirmation details shortly.
+    </div>
+
+    <form id="event-form">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John" required>
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="you@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+44 7000 000000">
+      </div>
+
+      <div class="form-group">
+        <label>Select Event</label>
+        <select required>
+          <option value="" disabled selected>Choose an event...</option>
+          <option>Coffee Tasting Session – 15 Feb · £25</option>
+          <option>Brewing Masterclass – 22 Feb · £40</option>
+          <option>Meet the Roaster – 1 Mar · Free</option>
+          <option>Latte Art for Beginners – 8 Mar · £35</option>
+          <option>Origin Story: Ethiopia – 15 Mar · £20</option>
+          <option>Home Barista Course – 29 Mar · £95</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Number of Guests</label>
+        <input type="number" min="1" max="10" placeholder="1" value="1">
+      </div>
+
+      <div class="form-group">
+        <label>Special Requirements (optional)</label>
+        <textarea placeholder="Dietary requirements, accessibility needs, questions..."></textarea>
+      </div>
+
+      <button type="submit" class="auth-submit">Register Now</button>
+
+      <p style="margin-top:16px; font-size:13px; color:gray;">
+        Want to see all events first?
+        <a href="events.html" style="color:#c48b4f; text-decoration:none;">Back to Events</a>
+      </p>
+
+    </form>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-col">
+      <h3>Roastcraft</h3>
+      <p>Premium single origin coffee, roasted fresh and delivered to your door.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.6 1.6-1.6H16V4.8c-.2 0-1-.1-2-.1-2.4 0-4 1.5-4 4.2V11H7.5v3H10v7h3.5z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 6.5c-.6.3-1.3.5-2 .6.7-.4 1.3-1.1 1.6-1.9-.7.4-1.5.7-2.3.9A3.5 3.5 0 0 0 12.3 9c0 .3 0 .6.1.8-2.9-.1-5.6-1.6-7.3-3.8-.3.5-.5 1.1-.5 1.8 0 1.2.6 2.3 1.6 2.9-.6 0-1.1-.2-1.6-.4 0 0 0 .1 0 .1 0 1.7 1.2 3.1 2.8 3.4-.3.1-.6.1-.9.1-.2 0-.4 0-.7-.1.4 1.4 1.8 2.4 3.3 2.4A7 7 0 0 1 4 18.3 9.9 9.9 0 0 0 9.4 20c6.5 0 10.1-5.5 10.1-10.2v-.5c.7-.5 1.2-1 1.5-1.8z" fill="currentColor" stroke="none"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="coffee.html">Coffee</a>
+      <a href="equipment.html">Equipment</a>
+      <a href="events.html">Events</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>42 Roast Lane, Shoreditch</p>
+      <p>London, E1 6RF</p>
+      <p>hello@roastcraft.co.uk</p>
+      <p>+44 20 7946 0958</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Opening Hours</h4>
+      <p>Mon–Fri: 7am – 7pm</p>
+      <p>Sat–Sun: 8am – 6pm</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Roastcraft Coffee. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<script>
+document.getElementById('event-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('form-success').style.display = 'block';
+  this.reset();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
